@@ -12,14 +12,18 @@ public class Waypoints : MonoBehaviour
     private int _randomNum;
     private int _lastRandomNum;
 
+
+    [SerializeField] private bool _drawPath;
+    [SerializeField] private bool _loopPath;
+
     void Start()
     {
-        
+
         //Fill the array with children 
         for (int i = 0; i < transform.childCount; i++)
         {
             _waypoints[i] = transform.GetChild(i);
-        }       
+        }
     }
 
     // Returns the position of the waypoint at the given index
@@ -66,19 +70,23 @@ public class Waypoints : MonoBehaviour
     //Draws the blue spheres and red lines. Used to visualize the waypoints 
     private void OnDrawGizmos()
     {
-        foreach (Transform t in transform)
+        if (_drawPath)
         {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawSphere(t.position, _waypointSize);
+            foreach (Transform t in transform)
+            {
+                Gizmos.color = Color.blue;
+                Gizmos.DrawSphere(t.position, _waypointSize);
+            }
+
+            Gizmos.color = Color.red;
+
+            for (int i = 0; i < transform.childCount - 1; i++)
+            {
+                Gizmos.DrawLine(transform.GetChild(i).position, transform.GetChild(i + 1).position);
+            }
+
+            if (_loopPath)
+                Gizmos.DrawLine(transform.GetChild(transform.childCount - 1).position, transform.GetChild(0).position);
         }
-
-        Gizmos.color = Color.red;
-
-        for (int i = 0; i < transform.childCount - 1; i++)
-        {
-            Gizmos.DrawLine(transform.GetChild(i).position, transform.GetChild(i + 1).position);
-        }
-
-        Gizmos.DrawLine(transform.GetChild(transform.childCount - 1).position, transform.GetChild(0).position);
     }
 }
