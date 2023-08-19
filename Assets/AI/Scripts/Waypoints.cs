@@ -7,11 +7,10 @@ public class Waypoints : MonoBehaviour
     [Range(0f, 2f)]
     [SerializeField] private float _waypointSize = 0.5f;
 
-    [SerializeField] private Transform[] _waypoints = new Transform[6];
+    [SerializeField] private Transform[] _waypoints = new Transform[7];
 
     private int _randomNum;
     private int _lastRandomNum;
-
 
     [SerializeField] private bool _drawPath;
     [SerializeField] private bool _loopPath;
@@ -67,7 +66,7 @@ public class Waypoints : MonoBehaviour
         return _waypoints[_randomNum].position;
     }
 
-    //Draws the blue spheres and red lines. Used to visualize the waypoints 
+    //Draws the blue spheres and red lines.Used to visualize the waypoints
     private void OnDrawGizmos()
     {
         if (_drawPath)
