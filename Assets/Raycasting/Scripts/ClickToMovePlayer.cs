@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class ClickToMovePlayer : MonoBehaviour
 {
 
     [SerializeField] private float _moveSpeed;
@@ -24,12 +24,6 @@ public class Player : MonoBehaviour
 
         if (distance > 0.5f)
         {
-            //var direction = _targetPos - transform.position;
-
-            //direction.Normalize();
-
-            //transform.Translate(direction * _moveSpeed * Time.deltaTime);
-
             MoveToPosition(_targetPos);
         }
     }

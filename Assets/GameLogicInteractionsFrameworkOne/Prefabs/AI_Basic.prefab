@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5703264076429682355}
   - component: {fileID: 5703264076429682352}
   - component: {fileID: 5703264076429682353}
-  - component: {fileID: 5703264076429682358}
+  - component: {fileID: 4635997286493432197}
   m_Layer: 0
   m_Name: AI_Basic
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5703264076429682356}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.12, y: 1.02, z: 0.49}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.1, y: 1.02, z: 0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,7 +118,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5703264076429682358
+--- !u!114 &4635997286493432197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5703264076429682356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfd0b7c024e5a36468a61846dae32bfe, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a3b53eb86be4024fa1be19832c9a0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentWaypointIndex: 0
+  _currentState: 0
+  _currentHealth: 0

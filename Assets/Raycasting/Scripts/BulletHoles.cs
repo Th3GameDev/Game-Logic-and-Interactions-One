@@ -54,10 +54,6 @@ public class BulletHoles : MonoBehaviour
 
                 Debug.DrawRay(ray.origin, Camera.main.transform.forward * 1000, Color.green);
             }
-            else
-            {
-
-            }
         }
         else
         {

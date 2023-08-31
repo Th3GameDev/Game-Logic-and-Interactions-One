@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClickToMove : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private ClickToMovePlayer _player;
 
     private Vector3 _positionOffset = new Vector3(0, 0.5f, 0);
 
@@ -15,7 +15,7 @@ public class ClickToMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _player = FindObjectOfType<Player>();
+        _player = FindObjectOfType<ClickToMovePlayer>();
 
         if (_player == null)
             Debug.LogError("Failed To Find Player Script");

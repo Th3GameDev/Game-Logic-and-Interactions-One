@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     private static SpawnManager _instance;
     public static SpawnManager Instance { get { if (_instance == null) { Debug.LogError("The SpawnManager Is NULL!"); } return _instance; } }
 
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private GameObject[] _enemyPrefabs;
 
     [SerializeField] private List<GameObject> _enemyPool = new List<GameObject>();
 
@@ -15,9 +15,12 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private Transform _enemySpawnPos;
 
-    private int _enemiesSpawned = 0;
+    [SerializeField] private int _enemiesSpawned = 0;
 
-    private bool _spawningComplete;
+    private int _randomNum;
+    private int _lastRandomNum;
+
+    [SerializeField] private bool _isSpawningComplete = false;
 
     private void Awake()
     {
@@ -28,15 +31,32 @@ public class SpawnManager : MonoBehaviour
     {
         _enemySpawnPos = transform.GetChild(1);
         _enemyPool = PopulateEnemyPool(_enemySpawnAmount, _enemySpawnPos.position);
+        StartEnemySpawning();
+    }
+
+    private void Update()
+    {
+        if (_enemiesSpawned == 0 && _isSpawningComplete == true)
+        {
+            _isSpawningComplete = false;
+            StartCoroutine(WaitToRespawnEnemies());
+        }
+    }
+
+    private void StartEnemySpawning()
+    {
+        _enemiesSpawned = 0;
+        _isSpawningComplete = false;
         StartCoroutine(SpawnEnemies());
     }
 
-    List<GameObject> PopulateEnemyPool(int enemySpawnAmount, Vector3 enemySpawnPos)
+    List<GameObject> PopulateEnemyPool(int SpawnAmount, Vector3 enemySpawnPos)
     {
+        GameObject randomEnemy = GetRandomEnemyPrefab(_enemyPrefabs);
 
-        for (int i = 0; i < enemySpawnAmount; i++)
+        for (int i = 0; i < SpawnAmount; i++)
         {
-            GameObject enemy = Instantiate(_enemyPrefab, enemySpawnPos, Quaternion.identity);
+            GameObject enemy = Instantiate(randomEnemy, enemySpawnPos, Quaternion.identity);
 
             enemy.transform.parent = transform.GetChild(0);
 
@@ -61,28 +81,64 @@ public class SpawnManager : MonoBehaviour
                 return enemy;
             }
         }
-
-        GameObject newEnemy = Instantiate(_enemyPrefab, enemySpawnPos.position, Quaternion.identity);
+        GameObject randomEnemy = GetRandomEnemyPrefab(_enemyPrefabs);
+        GameObject newEnemy = Instantiate(randomEnemy, enemySpawnPos.position, Quaternion.identity);
         newEnemy.transform.parent = transform.GetChild(0);
         _enemyPool.Add(newEnemy);
 
         return null;
     }
 
+    private GameObject GetRandomEnemyPrefab(GameObject[] prefabs)
+    {
+        _randomNum = Random.Range(0, _enemyPrefabs.Length);
+
+        for (int i = 0; i < _enemyPrefabs.Length; i++)
+        {
+            if (_randomNum == _lastRandomNum)
+            {
+                while (_randomNum == _lastRandomNum)
+                {
+                    _randomNum = Random.Range(0, _enemyPrefabs.Length);
+                }
+            }
+
+            _lastRandomNum = _randomNum;
+        }
+
+        return _enemyPrefabs[_randomNum];
+    }
+
+    public void OnEnemyKilled()
+    {
+        _enemiesSpawned--;
+    }
+
+    private IEnumerator WaitToRespawnEnemies()
+    {      
+        Debug.Log("Enemies Respawning Soon");
+
+        yield return new WaitForSeconds(3f);
+
+        StartEnemySpawning();
+    }
+
     private IEnumerator SpawnEnemies()
     {
-        while (_enemiesSpawned < _enemySpawnAmount)
+        //yield return new WaitForSeconds(1.5f);
+      
+        for (int i = 0; i < _enemySpawnAmount; i++)
         {
-            GameObject enemy = RequestEnemy(_enemySpawnPos);
+            GameObject enemy = RequestEnemy(_enemySpawnPos);           
 
             if (enemy != null)
             {
                 _enemiesSpawned++;
             }
 
-            yield return new WaitForSeconds(25f);
+            yield return new WaitForSeconds(15f);
         }
 
-        _spawningComplete = true;
+        _isSpawningComplete = true;
     }
 }
