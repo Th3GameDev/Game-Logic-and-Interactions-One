@@ -19,8 +19,8 @@ public class BasicAI : MonoBehaviour
     private int _maxHealth = 100;
     [SerializeField] private int _currentHealth = 0;
 
-    [SerializeField] private int _currentWaypointIndex;
-    [SerializeField] private int _currentHidingWaypointIndex;
+    private int _currentWaypointIndex;
+    private int _currentHidingWaypointIndex;
 
     private float _rotationSpeed = 400f;
 

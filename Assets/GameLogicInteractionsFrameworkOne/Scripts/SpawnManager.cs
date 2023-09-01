@@ -91,22 +91,22 @@ public class SpawnManager : MonoBehaviour
 
     private GameObject GetRandomEnemyPrefab(GameObject[] prefabs)
     {
-        _randomNum = Random.Range(0, _enemyPrefabs.Length);
+        _randomNum = Random.Range(0, prefabs.Length);
 
-        for (int i = 0; i < _enemyPrefabs.Length; i++)
+        for (int i = 0; i < prefabs.Length; i++)
         {
             if (_randomNum == _lastRandomNum)
             {
                 while (_randomNum == _lastRandomNum)
                 {
-                    _randomNum = Random.Range(0, _enemyPrefabs.Length);
+                    _randomNum = Random.Range(0, prefabs.Length);
                 }
             }
 
             _lastRandomNum = _randomNum;
         }
 
-        return _enemyPrefabs[_randomNum];
+        return  prefabs[_randomNum];
     }
 
     public void OnEnemyKilled()
@@ -125,8 +125,6 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
     {
-        //yield return new WaitForSeconds(1.5f);
-      
         for (int i = 0; i < _enemySpawnAmount; i++)
         {
             GameObject enemy = RequestEnemy(_enemySpawnPos);           

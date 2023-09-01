@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5703264076429682352}
   - component: {fileID: 5703264076429682353}
   - component: {fileID: 4635997286493432197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AI_Basic
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -132,3 +132,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentState: 0
   _currentHealth: 0
+  _currentWaypointIndex: 0
+  _currentHidingWaypointIndex: 0

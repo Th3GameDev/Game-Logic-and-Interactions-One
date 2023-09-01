@@ -618,7 +618,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 1
-  m_Antialiasing: 1
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -638,13 +638,14 @@ GameObject:
   - component: {fileID: 3522221881866731913}
   - component: {fileID: 3559926251135889283}
   - component: {fileID: 3534858390546826023}
+  - component: {fileID: 7978863769081534641}
   m_Layer: 0
   m_Name: GDHQ_FPS_Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3497286374441318163
 Transform:
   m_ObjectHideFlags: 0
@@ -709,3 +710,17 @@ MonoBehaviour:
   _runFrequency: 7.8
   _heightOffset: 0.05
   _lookSensitivity: 5
+--- !u!114 &7978863769081534641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503760010013013579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69049b4be5435e34ab072ae76e65ad27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunBarrelPos: {fileID: 1644110978}
+  _fireRate: 0.3
