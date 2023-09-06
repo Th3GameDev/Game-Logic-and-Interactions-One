@@ -8,26 +8,35 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get { if (_instance == null) { Debug.LogError("GameManager is NULL!"); } return _instance; } }
 
-   [SerializeField] private int Score = 0;
+    [SerializeField] private int Score = 0;
 
 
     private void Awake()
     {
-        _instance = this; 
+        _instance = this;
     }
 
     void Start()
     {
-        
+        Score = 0;
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            StartGame();
+        }
+    }
+
+    public void StartGame()
+    {
+        SpawnManager.Instance.gameObject.GetComponent<SpawnManager>().enabled = true;
     }
 
     public void UpdateScore(int points)
     {
-       Score += points;
+        Score += points;
+        UIManager.Instance.UpdateScoreUI(Score);
     }
 }

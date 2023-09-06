@@ -967,8 +967,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentState: 0
   _currentHealth: 0
-  _currentWaypointIndex: 0
-  _currentHidingWaypointIndex: 0
 --- !u!1 &2947682474243510100
 GameObject:
   m_ObjectHideFlags: 0

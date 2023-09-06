@@ -72,9 +72,9 @@ public class BasicAI : MonoBehaviour
                 break;
 
             case AIState.Death:
-                if (!_isDying) 
+                if (!_isDying)
                 {
-                    _isDying = true; 
+                    _isDying = true;
                     _agent.isStopped = true;
                     StartCoroutine(AIDeath());
                 }
@@ -196,13 +196,13 @@ public class BasicAI : MonoBehaviour
 
     IEnumerator AIDeath()
     {
+        GameManager.Instance.UpdateScore(50);
+        SpawnManager.Instance.OnEnemyKilled();
         _anim.SetTrigger("Death");
         _currentHealth = 0;
         yield return new WaitForSeconds(4f);
         this.gameObject.SetActive(false);
-        ResetAI();
-        SpawnManager.Instance.OnEnemyKilled();
-        GameManager.Instance.UpdateScore(50);
+        ResetAI();      
         _isDying = false;
     }
 

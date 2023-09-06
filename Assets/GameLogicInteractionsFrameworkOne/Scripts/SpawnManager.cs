@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -12,11 +13,16 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<GameObject> _enemyPool = new List<GameObject>();
 
     [Range(0, 20)][SerializeField][Tooltip("The Amount of Enemies to Spawn")] private int _enemySpawnAmount;
+    private float _enemySpawnTime = 10f;
 
     [SerializeField] private Transform _enemySpawnPos;
 
-    [SerializeField] private int _enemiesSpawned = 0;
+    [SerializeField] private int _enemiesAlive = 0;
 
+    private float _timeRemaining;
+    private bool _isTimerCountdown = false;
+
+    private int _currentWave;
     private int _randomNum;
     private int _lastRandomNum;
 
@@ -28,25 +34,48 @@ public class SpawnManager : MonoBehaviour
     }
 
     private void Start()
-    {
+    {      
+        _isTimerCountdown = true;
+        _timeRemaining = 10f;
+        UIManager.Instance.EnableTimeRemaining();
+        _currentWave = 1;
         _enemySpawnPos = transform.GetChild(1);
         _enemyPool = PopulateEnemyPool(_enemySpawnAmount, _enemySpawnPos.position);
-        StartEnemySpawning();
     }
 
     private void Update()
     {
-        if (_enemiesSpawned == 0 && _isSpawningComplete == true)
+        if (_enemiesAlive == 0 && _isSpawningComplete == true)
         {
             _isSpawningComplete = false;
-            StartCoroutine(WaitToRespawnEnemies());
+            _isTimerCountdown = true;
+            _timeRemaining = 30f;
+            UIManager.Instance.EnableTimeRemaining();
+            OnWaveComplete();
+        }
+
+        if (_isTimerCountdown == true)
+        {
+            if (_timeRemaining > 0f)
+            {
+                UIManager.Instance.UpdateTimeRemaining();
+                _timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                _timeRemaining = 0f;
+                _isTimerCountdown = false;
+                UIManager.Instance.DisableTimeRemaining();
+                StartCoroutine(UIManager.Instance.BlinkGameObject(3, 0.3f, true));
+                UIManager.Instance.UpdateWaveNumber();
+                StartEnemySpawning();
+            }
         }
     }
 
     private void StartEnemySpawning()
     {
-        _enemiesSpawned = 0;
-        _isSpawningComplete = false;
+        _enemiesAlive = 0;
         StartCoroutine(SpawnEnemies());
     }
 
@@ -106,35 +135,68 @@ public class SpawnManager : MonoBehaviour
             _lastRandomNum = _randomNum;
         }
 
-        return  prefabs[_randomNum];
+        return prefabs[_randomNum];
     }
 
     public void OnEnemyKilled()
     {
-        _enemiesSpawned--;
+        _enemiesAlive--;
+
+        UIManager.Instance.UpdateEnemyCount(_enemiesAlive);
     }
 
-    private IEnumerator WaitToRespawnEnemies()
-    {      
-        Debug.Log("Enemies Respawning Soon");
+    public int GetEnemyCount()
+    {
+        return _enemySpawnAmount;
+    }
 
-        yield return new WaitForSeconds(3f);
+    public float GetTimeRemaining()
+    {
+        return _timeRemaining;
+    }
 
-        StartEnemySpawning();
+    void OnWaveComplete()
+    {
+
+        _isSpawningComplete = false;
+        _isTimerCountdown = true;
+        _timeRemaining = 5f;
+        UIManager.Instance.EnableTimeRemaining();
+        _currentWave++;
+        _enemySpawnAmount++;
+
+        if (_currentWave == 5)
+            _enemySpawnTime = 5f;
+    }
+
+    public int GetCurrentWave()
+    {
+        return _currentWave;
     }
 
     private IEnumerator SpawnEnemies()
     {
+        int temp = 0;
+
         for (int i = 0; i < _enemySpawnAmount; i++)
         {
-            GameObject enemy = RequestEnemy(_enemySpawnPos);           
+            GameObject enemy = RequestEnemy(_enemySpawnPos);
 
             if (enemy != null)
             {
-                _enemiesSpawned++;
+                _enemiesAlive++;
+                temp++;
+                UIManager.Instance.UpdateEnemyCount(_enemiesAlive);
             }
 
-            yield return new WaitForSeconds(15f);
+            if (temp != _enemySpawnAmount)
+            {
+                yield return new WaitForSeconds(_enemySpawnTime);
+            }
+            else
+            {               
+                yield return null;
+            }          
         }
 
         _isSpawningComplete = true;
