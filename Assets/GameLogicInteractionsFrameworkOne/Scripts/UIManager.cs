@@ -20,13 +20,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timeRemainingText;
     [SerializeField] private TextMeshProUGUI _timeText;
 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _audioClips;
+
+    private bool _isReset = true;
+    [SerializeField] private bool _isTimerTicking = false;
+    [SerializeField] private bool _isWarning = false;
 
     private void Awake()
     {
         _instance = this;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();
@@ -39,7 +44,10 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-       
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            PlayWarningSound();
+        }
     }
 
     public void UpdateAmmoCount(int ammoCount)
@@ -68,11 +76,13 @@ public class UIManager : MonoBehaviour
         float minutes = Mathf.FloorToInt(time / 60);
         float seconds = Mathf.FloorToInt(time % 60);
         _timeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+        _isReset = false;
     }
+
     public void EnableTimeRemaining()
     {
         _timeRemainingText.enabled = true;
-        _timeText.enabled = true;      
+        _timeText.enabled = true;
     }
 
     public void DisableTimeRemaining()
@@ -84,7 +94,7 @@ public class UIManager : MonoBehaviour
     void ResetUI()
     {
         _scoreText.text = "0";
-        _enemyCountText.text = "0"; 
+        _enemyCountText.text = "0";
         _ammoText.text = $"{_player.GetAmmoCount()}";
         UpdateWaveNumber();
         UpdateTimeRemaining();
@@ -112,5 +122,57 @@ public class UIManager : MonoBehaviour
         {
             _warningText.enabled = true;
         }
+    }
+
+    public void PlayWarningSound()
+    {
+        if (_isWarning == false)
+        {
+            _audioSource.volume = 1.0f;
+            _isWarning = true;
+            StartCoroutine(PlayWarning());
+        }
+    }
+
+    public void PlayTimerTickSound(int NumOfTimerTicks)
+    {
+        if (_isTimerTicking == false)
+        {
+            _audioSource.volume = 0.2f;
+            _audioSource.clip = _audioClips[0];
+            StartCoroutine(PlayTimerSound(NumOfTimerTicks));
+            _isTimerTicking = true;
+        }
+    }
+
+    private IEnumerator PlayWarning()
+    {
+        _audioSource.clip = _audioClips[1];
+
+        for (int i = 0; i < 3; i++)
+        {
+            _audioSource.PlayOneShot(_audioClips[1]);
+            yield return new WaitForSeconds(0.6f);
+        }
+
+        _isWarning = false;
+    }
+
+    private IEnumerator PlayTimerSound(int NumOfTicks)
+    {
+        for (int i = 0; i < NumOfTicks; i++)
+        {
+            if (i == 10)
+            {
+                _audioSource.Stop();
+            }
+            else if (i < 9)
+            {
+                _audioSource.PlayOneShot(_audioClips[0]);
+            }
+            yield return new WaitForSeconds(1f);
+        }
+
+        _isTimerTicking = false;
     }
 }

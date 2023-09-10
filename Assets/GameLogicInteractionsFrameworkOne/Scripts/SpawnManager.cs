@@ -19,14 +19,17 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private int _enemiesAlive = 0;
 
-    private float _timeRemaining;
+    [SerializeField] private float _timeRemaining;
     private bool _isTimerCountdown = false;
 
     private int _currentWave;
     private int _randomNum;
     private int _lastRandomNum;
 
+    private int _timerTicks;
+
     [SerializeField] private bool _isSpawningComplete = false;
+
 
     private void Awake()
     {
@@ -34,7 +37,8 @@ public class SpawnManager : MonoBehaviour
     }
 
     private void Start()
-    {      
+    {
+        _timerTicks = 10;
         _isTimerCountdown = true;
         _timeRemaining = 10f;
         UIManager.Instance.EnableTimeRemaining();
@@ -59,16 +63,18 @@ public class SpawnManager : MonoBehaviour
             if (_timeRemaining > 0f)
             {
                 UIManager.Instance.UpdateTimeRemaining();
+                UIManager.Instance.PlayTimerTickSound(_timerTicks);
                 _timeRemaining -= Time.deltaTime;
             }
             else
-            {
+            {              
                 _timeRemaining = 0f;
                 _isTimerCountdown = false;
-                UIManager.Instance.DisableTimeRemaining();
+                UIManager.Instance.DisableTimeRemaining();               
                 StartCoroutine(UIManager.Instance.BlinkGameObject(3, 0.3f, true));
+                UIManager.Instance.PlayWarningSound();
                 UIManager.Instance.UpdateWaveNumber();
-                StartEnemySpawning();
+                StartEnemySpawning();              
             }
         }
     }
@@ -157,7 +163,7 @@ public class SpawnManager : MonoBehaviour
 
     void OnWaveComplete()
     {
-
+        _timerTicks = 5;
         _isSpawningComplete = false;
         _isTimerCountdown = true;
         _timeRemaining = 5f;
@@ -194,9 +200,9 @@ public class SpawnManager : MonoBehaviour
                 yield return new WaitForSeconds(_enemySpawnTime);
             }
             else
-            {               
+            {
                 yield return null;
-            }          
+            }
         }
 
         _isSpawningComplete = true;

@@ -26,7 +26,8 @@ public class BasicAI : MonoBehaviour
 
     private Quaternion _lookRotation;
 
-    // Start is called before the first frame update
+   [SerializeField] private AudioSource _audioSource;
+    
     void Start()
     {
         _currentHealth = _maxHealth;
@@ -46,7 +47,7 @@ public class BasicAI : MonoBehaviour
         _currentState = AIState.Running;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (_currentHealth <= 0)
@@ -196,6 +197,7 @@ public class BasicAI : MonoBehaviour
 
     IEnumerator AIDeath()
     {
+        _audioSource.Play();
         GameManager.Instance.UpdateScore(50);
         SpawnManager.Instance.OnEnemyKilled();
         _anim.SetTrigger("Death");

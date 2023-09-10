@@ -14,18 +14,21 @@ public class Player : MonoBehaviour
     private int _currentAmmo;
 
     private bool _canFire;
+    private bool _isReloading;
 
-    // Start is called before the first frame update
+    [SerializeField] private AudioSource[] _audioSource;
+    [SerializeField] private AudioClip[] _audioClips;
+    
     void Start()
     {
         _canFire = true;
         _currentAmmo = _maxAmmo;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _canFire && _currentAmmo > 0)
+        if (Input.GetMouseButtonDown(0) && _canFire && _currentAmmo > 0 && _isReloading == false)
         {
             Fire(_fireRate);
         }
@@ -35,7 +38,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && _isReloading == false)
         {
             Reload();
         }
@@ -43,6 +46,8 @@ public class Player : MonoBehaviour
 
     void Fire(float fireRate)
     {
+        _audioSource[0].Play();
+
         _currentAmmo--;
 
         UIManager.Instance.UpdateAmmoCount(_currentAmmo);
@@ -62,13 +67,19 @@ public class Player : MonoBehaviour
                 ai.Damage(50);
             }
         }
+        else if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 10))
+        {
+            _audioSource[1].Play();        
+        }
     }
 
     private void Reload()
     {
-        _currentAmmo = _maxAmmo;
-
-        UIManager.Instance.UpdateAmmoCount(_currentAmmo);
+        if (_isReloading == false)
+        {
+            _isReloading = true;
+            StartCoroutine(WeaponReload());
+        }   
     }
 
     public int GetAmmoCount()
@@ -76,8 +87,17 @@ public class Player : MonoBehaviour
         return _currentAmmo;
     }
 
-    IEnumerator FireRateCoolDown(float fireRate)
+    IEnumerator WeaponReload()
     {
+        _audioSource[0].PlayOneShot(_audioClips[1]);
+        yield return new WaitForSeconds(_audioClips[1].length);
+        _currentAmmo = _maxAmmo;
+        UIManager.Instance.UpdateAmmoCount(_currentAmmo);
+        _isReloading = false;
+    }
+
+    IEnumerator FireRateCoolDown(float fireRate)
+    {        
         yield return new WaitForSeconds(fireRate);
         _canFire = true;
     }
