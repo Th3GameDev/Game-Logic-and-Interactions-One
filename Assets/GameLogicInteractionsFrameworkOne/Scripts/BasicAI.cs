@@ -15,6 +15,7 @@ public class BasicAI : MonoBehaviour
     private bool _hasStarted;
     private bool _isHiding;
     private bool _isDying;
+    private bool _didComplete;
 
     private int _maxHealth = 100;
     [SerializeField] private int _currentHealth = 0;
@@ -26,8 +27,9 @@ public class BasicAI : MonoBehaviour
 
     private Quaternion _lookRotation;
 
-   [SerializeField] private AudioSource _audioSource;
-    
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _audioClips;
+
     void Start()
     {
         _currentHealth = _maxHealth;
@@ -47,7 +49,7 @@ public class BasicAI : MonoBehaviour
         _currentState = AIState.Running;
     }
 
-    
+
     void Update()
     {
         if (_currentHealth <= 0)
@@ -161,9 +163,11 @@ public class BasicAI : MonoBehaviour
 
         if (_currentWaypointIndex == _waypoints.GetWaypointCount())
         {
-            this.gameObject.SetActive(false);
-            ResetAI();
-            SpawnManager.Instance.OnEnemyKilled();
+            if (!_didComplete) 
+            {
+                _didComplete = true;
+                StartCoroutine(TriggerAICompleted());
+            }
         }
     }
 
@@ -185,7 +189,7 @@ public class BasicAI : MonoBehaviour
         }
     }
 
-    private void ResetAI()
+    public void ResetAI()
     {
         _anim.ResetTrigger("Death");
         _hasStarted = false;
@@ -193,6 +197,17 @@ public class BasicAI : MonoBehaviour
         _currentWaypointIndex = 0;
         _currentHidingWaypointIndex = 0;
         _currentHealth = _maxHealth;
+    }
+
+    IEnumerator TriggerAICompleted() 
+    {
+        _agent.isStopped = true;
+        _audioSource.PlayOneShot(_audioClips[1]);
+        yield return new WaitForSeconds(_audioClips[1].length);
+        this.gameObject.SetActive(false);
+        ResetAI();
+        SpawnManager.Instance.OnEnemyKilled();
+        _didComplete = false;
     }
 
     IEnumerator AIDeath()
@@ -204,7 +219,7 @@ public class BasicAI : MonoBehaviour
         _currentHealth = 0;
         yield return new WaitForSeconds(4f);
         this.gameObject.SetActive(false);
-        ResetAI();      
+        ResetAI();
         _isDying = false;
     }
 

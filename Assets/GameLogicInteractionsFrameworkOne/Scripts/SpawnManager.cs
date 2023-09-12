@@ -10,16 +10,16 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private GameObject[] _enemyPrefabs;
 
-    [SerializeField] private List<GameObject> _enemyPool = new List<GameObject>();
+    private List<GameObject> _enemyPool = new List<GameObject>();
 
     [Range(0, 20)][SerializeField][Tooltip("The Amount of Enemies to Spawn")] private int _enemySpawnAmount;
     private float _enemySpawnTime = 10f;
 
     [SerializeField] private Transform _enemySpawnPos;
 
-    [SerializeField] private int _enemiesAlive = 0;
+    private int _enemiesAlive = 0;
 
-    [SerializeField] private float _timeRemaining;
+    private float _timeRemaining;
     private bool _isTimerCountdown = false;
 
     private int _currentWave;
@@ -28,8 +28,10 @@ public class SpawnManager : MonoBehaviour
 
     private int _timerTicks;
 
-    [SerializeField] private bool _isSpawningComplete = false;
+    private bool _isSpawningComplete = false;
+    private bool _isGameComplete = false;
 
+    [SerializeField] private bool _test = false;
 
     private void Awake()
     {
@@ -49,16 +51,22 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if (_enemiesAlive == 0 && _isSpawningComplete == true)
+        if (_enemiesAlive == 0 && _isSpawningComplete)
         {
-            _isSpawningComplete = false;
-            _isTimerCountdown = true;
-            _timeRemaining = 30f;
-            UIManager.Instance.EnableTimeRemaining();
-            OnWaveComplete();
+            if (_currentWave == 10 && _isGameComplete)
+            {
+                _isSpawningComplete = false;
+
+                GameManager.Instance.GameOver(true);
+            }
+            else
+            {
+                _isSpawningComplete = false;
+                OnWaveComplete();
+            }
         }
 
-        if (_isTimerCountdown == true)
+        if (_isTimerCountdown)
         {
             if (_timeRemaining > 0f)
             {
@@ -67,14 +75,14 @@ public class SpawnManager : MonoBehaviour
                 _timeRemaining -= Time.deltaTime;
             }
             else
-            {              
+            {
                 _timeRemaining = 0f;
                 _isTimerCountdown = false;
-                UIManager.Instance.DisableTimeRemaining();               
+                UIManager.Instance.DisableTimeRemaining();
                 StartCoroutine(UIManager.Instance.BlinkGameObject(3, 0.3f, true));
                 UIManager.Instance.PlayWarningSound();
                 UIManager.Instance.UpdateWaveNumber();
-                StartEnemySpawning();              
+                StartEnemySpawning();
             }
         }
     }
@@ -121,7 +129,7 @@ public class SpawnManager : MonoBehaviour
         newEnemy.transform.parent = transform.GetChild(0);
         _enemyPool.Add(newEnemy);
 
-        return null;
+        return newEnemy;
     }
 
     private GameObject GetRandomEnemyPrefab(GameObject[] prefabs)
@@ -163,16 +171,77 @@ public class SpawnManager : MonoBehaviour
 
     void OnWaveComplete()
     {
-        _timerTicks = 5;
-        _isSpawningComplete = false;
-        _isTimerCountdown = true;
-        _timeRemaining = 5f;
-        UIManager.Instance.EnableTimeRemaining();
-        _currentWave++;
-        _enemySpawnAmount++;
+        if (_currentWave < 10)
+            _currentWave++;
 
-        if (_currentWave == 5)
+        if (_currentWave < 5)
+        {
+            _timerTicks = 6;
+            _isSpawningComplete = false;
+            _isTimerCountdown = true;
+            _timeRemaining = 6f;
+            UIManager.Instance.EnableTimeRemaining();
+
+            if (!_test)
+                _enemySpawnAmount++;
+        }
+        else if (_currentWave >= 5 && _currentWave < 10)
+        {
+            _timerTicks = 6;
+            _isSpawningComplete = false;
+            _isTimerCountdown = true;
+            _timeRemaining = 6f;
+            UIManager.Instance.EnableTimeRemaining();
+
+            if (!_test)
+                _enemySpawnAmount++;
+
             _enemySpawnTime = 5f;
+        }
+        else if (_currentWave == 10)
+        {
+            _timerTicks = 6;
+            _isSpawningComplete = false;
+            _isTimerCountdown = true;
+            _timeRemaining = 6f;
+            UIManager.Instance.EnableTimeRemaining();
+
+            if (!_test)
+                _enemySpawnAmount++;
+
+            _isGameComplete = true;
+        }
+    }
+
+    public void ResetWave()
+    {
+        _isSpawningComplete = false;
+
+        foreach (GameObject enemy in _enemyPool)
+        {
+            if (enemy.activeInHierarchy)
+            {
+                enemy.SetActive(false);
+                enemy.GetComponent<BasicAI>().ResetAI();
+                OnEnemyKilled();
+            }
+        }
+
+        if (!_test)
+        {
+            _enemySpawnAmount = 5;
+        }
+        else
+        {
+            _enemySpawnAmount = 1;
+        }
+
+        _timerTicks = 10;
+        _isTimerCountdown = true;
+        _timeRemaining = 10f;
+        UIManager.Instance.EnableTimeRemaining();
+        _currentWave = 1;
+        _enemySpawnPos = transform.GetChild(1);
     }
 
     public int GetCurrentWave()

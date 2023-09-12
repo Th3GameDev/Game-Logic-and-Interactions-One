@@ -17,15 +17,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _waveText;
 
     [SerializeField] private TextMeshProUGUI _warningText;
-    [SerializeField] private TextMeshProUGUI _timeRemainingText;
-    [SerializeField] private TextMeshProUGUI _timeText;
+    [SerializeField] private TextMeshProUGUI _timeRemainingText, _timeText;
+
+    [SerializeField] private TextMeshProUGUI _winText, _gameOverText, _inputText;
 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _audioClips;
 
-    private bool _isReset = true;
-    [SerializeField] private bool _isTimerTicking = false;
-    [SerializeField] private bool _isWarning = false;
+    private bool _isTimerTicking = false;
+    private bool _isWarning = false;
 
     private void Awake()
     {
@@ -44,10 +44,7 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            PlayWarningSound();
-        }
+
     }
 
     public void UpdateAmmoCount(int ammoCount)
@@ -76,7 +73,6 @@ public class UIManager : MonoBehaviour
         float minutes = Mathf.FloorToInt(time / 60);
         float seconds = Mathf.FloorToInt(time % 60);
         _timeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
-        _isReset = false;
     }
 
     public void EnableTimeRemaining()
@@ -91,11 +87,15 @@ public class UIManager : MonoBehaviour
         _timeText.enabled = false;
     }
 
-    void ResetUI()
+    public void ResetUI()
     {
         _scoreText.text = "0";
         _enemyCountText.text = "0";
         _ammoText.text = $"{_player.GetAmmoCount()}";
+        _gameOverText.enabled = false;
+        _winText.enabled = false;
+        _inputText.enabled = false;
+        _waveText.enabled = false;
         UpdateWaveNumber();
         UpdateTimeRemaining();
     }
@@ -124,9 +124,23 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void DisplayWinLossUI(bool Win)
+    {
+        if (Win)
+        {
+            _winText.enabled = true;
+            _inputText.enabled = true;
+        }
+        else
+        {
+            _gameOverText.enabled = true;
+            _inputText.enabled = true;
+        }
+    }
+
     public void PlayWarningSound()
     {
-        if (_isWarning == false)
+        if (!_isWarning)
         {
             _audioSource.volume = 1.0f;
             _isWarning = true;
@@ -136,9 +150,9 @@ public class UIManager : MonoBehaviour
 
     public void PlayTimerTickSound(int NumOfTimerTicks)
     {
-        if (_isTimerTicking == false)
+        if (!_isTimerTicking)
         {
-            _audioSource.volume = 0.2f;
+            _audioSource.volume = 0.5f;
             _audioSource.clip = _audioClips[0];
             StartCoroutine(PlayTimerSound(NumOfTimerTicks));
             _isTimerTicking = true;

@@ -18,14 +18,14 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioSource[] _audioSource;
     [SerializeField] private AudioClip[] _audioClips;
-    
+
     void Start()
     {
         _canFire = true;
         _currentAmmo = _maxAmmo;
     }
 
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && _canFire && _currentAmmo > 0 && _isReloading == false)
@@ -37,6 +37,15 @@ public class Player : MonoBehaviour
             Reload();
         }
 
+        //Testing
+        if (Input.GetMouseButton(1))
+        {
+            Camera.main.fieldOfView = 25;
+        }
+        else
+        {
+            Camera.main.fieldOfView = 55;
+        }
 
         if (Input.GetKeyDown(KeyCode.R) && _isReloading == false)
         {
@@ -69,7 +78,7 @@ public class Player : MonoBehaviour
         }
         else if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 10))
         {
-            _audioSource[1].Play();        
+            _audioSource[1].Play();
         }
     }
 
@@ -79,7 +88,7 @@ public class Player : MonoBehaviour
         {
             _isReloading = true;
             StartCoroutine(WeaponReload());
-        }   
+        }
     }
 
     public int GetAmmoCount()
@@ -97,7 +106,7 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator FireRateCoolDown(float fireRate)
-    {        
+    {
         yield return new WaitForSeconds(fireRate);
         _canFire = true;
     }
