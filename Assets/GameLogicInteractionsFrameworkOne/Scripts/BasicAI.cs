@@ -15,9 +15,9 @@ public class BasicAI : MonoBehaviour
     private bool _hasStarted;
     private bool _isHiding;
     private bool _isDying;
-    private bool _didComplete;
+    private bool _didComplete = false;
 
-    private int _maxHealth = 100;
+    [SerializeField] private int _maxHealth = 100;
     [SerializeField] private int _currentHealth = 0;
 
     private int _currentWaypointIndex;
@@ -30,13 +30,24 @@ public class BasicAI : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _audioClips;
 
+    [SerializeField] private bool _isStrongEnemy = false;
+
     void Start()
     {
-        _currentHealth = _maxHealth;
-
         _agent = GetComponent<NavMeshAgent>();
         _waypoints = FindObjectOfType<Waypoints>();
         _anim = GetComponent<Animator>();
+
+        if (_isStrongEnemy)
+        {
+            _agent.speed = 4;
+            _maxHealth = 200;
+        }     
+        else
+        {
+            _currentHealth = _maxHealth;
+        }
+
 
         if (_waypoints == null)
         {
@@ -163,7 +174,7 @@ public class BasicAI : MonoBehaviour
 
         if (_currentWaypointIndex == _waypoints.GetWaypointCount())
         {
-            if (!_didComplete) 
+            if (!_didComplete)
             {
                 _didComplete = true;
                 StartCoroutine(TriggerAICompleted());
@@ -199,14 +210,17 @@ public class BasicAI : MonoBehaviour
         _currentHealth = _maxHealth;
     }
 
-    IEnumerator TriggerAICompleted() 
+    IEnumerator TriggerAICompleted()
     {
+
         _agent.isStopped = true;
         _audioSource.PlayOneShot(_audioClips[1]);
         yield return new WaitForSeconds(_audioClips[1].length);
         this.gameObject.SetActive(false);
         ResetAI();
-        SpawnManager.Instance.OnEnemyKilled();
+       //TestSpawn.Instance.OnEnemySurvived();
+        SpawnManager.Instance.OnEnemySurvived();
+        //SpawnManager.Instance.OnEnemyKilled(); //OLD OLD 
         _didComplete = false;
     }
 
@@ -214,6 +228,7 @@ public class BasicAI : MonoBehaviour
     {
         _audioSource.Play();
         GameManager.Instance.UpdateScore(50);
+        //TestSpawn.Instance.OnEnemyKilled();
         SpawnManager.Instance.OnEnemyKilled();
         _anim.SetTrigger("Death");
         _currentHealth = 0;

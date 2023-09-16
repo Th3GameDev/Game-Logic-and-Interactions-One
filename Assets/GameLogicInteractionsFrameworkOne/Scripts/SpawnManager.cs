@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private GameObject[] _enemyPrefabs;
 
+    [Space]
+    [SerializeField] private GameObject _strongEnemyPrefab;
+
     private List<GameObject> _enemyPool = new List<GameObject>();
 
     [Range(0, 20)][SerializeField][Tooltip("The Amount of Enemies to Spawn")] private int _enemySpawnAmount;
     private float _enemySpawnTime = 10f;
 
-    [SerializeField] private Transform _enemySpawnPos;
+    private Transform _enemySpawnPos;
 
     private int _enemiesAlive = 0;
 
@@ -31,7 +35,7 @@ public class SpawnManager : MonoBehaviour
     private bool _isSpawningComplete = false;
     private bool _isGameComplete = false;
 
-    [SerializeField] private bool _test = false;
+    private int _enemiesSurvived = 0;
 
     private void Awake()
     {
@@ -51,6 +55,14 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
+        if (_enemiesSurvived >= 1 && !_isGameComplete)
+        {
+            _isGameComplete = true;
+            StopCoroutine(SpawnEnemies());
+            _isSpawningComplete = false;
+            GameManager.Instance.GameOver(false);
+        }
+
         if (_enemiesAlive == 0 && _isSpawningComplete)
         {
             if (_currentWave == 10 && _isGameComplete)
@@ -90,16 +102,18 @@ public class SpawnManager : MonoBehaviour
     private void StartEnemySpawning()
     {
         _enemiesAlive = 0;
-        StartCoroutine(SpawnEnemies());
+
+        if (!_isSpawningComplete)
+        {
+            StartCoroutine(SpawnEnemies());
+        }
     }
 
     List<GameObject> PopulateEnemyPool(int SpawnAmount, Vector3 enemySpawnPos)
     {
-        GameObject randomEnemy = GetRandomEnemyPrefab(_enemyPrefabs);
-
         for (int i = 0; i < SpawnAmount; i++)
         {
-            GameObject enemy = Instantiate(randomEnemy, enemySpawnPos, Quaternion.identity);
+            GameObject enemy = Instantiate(GetRandomEnemyPrefab(_enemyPrefabs), enemySpawnPos, Quaternion.identity);
 
             enemy.transform.parent = transform.GetChild(0);
 
@@ -111,7 +125,7 @@ public class SpawnManager : MonoBehaviour
         return _enemyPool;
     }
 
-    public GameObject RequestEnemy(Transform enemySpawnPos)
+    private GameObject RequestEnemy(Transform enemySpawnPos)
     {
         foreach (GameObject enemy in _enemyPool)
         {
@@ -124,11 +138,20 @@ public class SpawnManager : MonoBehaviour
                 return enemy;
             }
         }
-        GameObject randomEnemy = GetRandomEnemyPrefab(_enemyPrefabs);
-        GameObject newEnemy = Instantiate(randomEnemy, enemySpawnPos.position, Quaternion.identity);
+
+        GameObject newEnemy = null;
+
+        if (_currentWave >= 5 && Random.Range(0, 2) == 0)
+        {
+            newEnemy = Instantiate(_strongEnemyPrefab, enemySpawnPos.position, Quaternion.identity);
+        }
+        else
+        {
+            newEnemy = Instantiate(GetRandomEnemyPrefab(_enemyPrefabs), enemySpawnPos.position, Quaternion.identity);
+        }
+
         newEnemy.transform.parent = transform.GetChild(0);
         _enemyPool.Add(newEnemy);
-
         return newEnemy;
     }
 
@@ -150,12 +173,20 @@ public class SpawnManager : MonoBehaviour
         }
 
         return prefabs[_randomNum];
+
     }
 
     public void OnEnemyKilled()
     {
         _enemiesAlive--;
 
+        UIManager.Instance.UpdateEnemyCount(_enemiesAlive);
+    }
+
+    public void OnEnemySurvived()
+    {
+        _enemiesSurvived++;
+        _enemiesAlive--;
         UIManager.Instance.UpdateEnemyCount(_enemiesAlive);
     }
 
@@ -181,9 +212,6 @@ public class SpawnManager : MonoBehaviour
             _isTimerCountdown = true;
             _timeRemaining = 6f;
             UIManager.Instance.EnableTimeRemaining();
-
-            if (!_test)
-                _enemySpawnAmount++;
         }
         else if (_currentWave >= 5 && _currentWave < 10)
         {
@@ -193,8 +221,7 @@ public class SpawnManager : MonoBehaviour
             _timeRemaining = 6f;
             UIManager.Instance.EnableTimeRemaining();
 
-            if (!_test)
-                _enemySpawnAmount++;
+            _enemySpawnAmount++;
 
             _enemySpawnTime = 5f;
         }
@@ -206,8 +233,7 @@ public class SpawnManager : MonoBehaviour
             _timeRemaining = 6f;
             UIManager.Instance.EnableTimeRemaining();
 
-            if (!_test)
-                _enemySpawnAmount++;
+            _enemySpawnAmount++;
 
             _isGameComplete = true;
         }
@@ -227,15 +253,7 @@ public class SpawnManager : MonoBehaviour
             }
         }
 
-        if (!_test)
-        {
-            _enemySpawnAmount = 5;
-        }
-        else
-        {
-            _enemySpawnAmount = 1;
-        }
-
+        _enemySpawnAmount = 5;
         _timerTicks = 10;
         _isTimerCountdown = true;
         _timeRemaining = 10f;

@@ -65,11 +65,13 @@ public class UIManager : MonoBehaviour
     public void UpdateWaveNumber()
     {
         _waveText.text = $"wave {SpawnManager.Instance.GetCurrentWave()}";
+        //_waveText.text = $"wave {TestSpawn.Instance.GetCurrentWave()}";
     }
 
     public void UpdateTimeRemaining()
     {
         float time = SpawnManager.Instance.GetTimeRemaining();
+        //float time = TestSpawn.Instance.GetTimeRemaining();
         float minutes = Mathf.FloorToInt(time / 60);
         float seconds = Mathf.FloorToInt(time % 60);
         _timeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);

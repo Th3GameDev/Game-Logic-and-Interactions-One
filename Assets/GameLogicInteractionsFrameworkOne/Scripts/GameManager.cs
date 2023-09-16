@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private bool _isGameOver = false;
 
-
     private void Awake()
     {
         _instance = this;
@@ -48,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        //TestSpawn.Instance.gameObject.GetComponent<TestSpawn>().enabled = true;
         SpawnManager.Instance.gameObject.GetComponent<SpawnManager>().enabled = true;
     }
 

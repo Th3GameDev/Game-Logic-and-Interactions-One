@@ -1165,7 +1165,7 @@ GameObject:
   - component: {fileID: 3588274312054650666}
   - component: {fileID: 4210756123682747069}
   m_Layer: 8
-  m_Name: AI_Robot_Red
+  m_Name: AI_Strong_Robot_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1216,7 +1216,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1255,11 +1255,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentState: 0
-  _currentHealth: 0
+  _maxHealth: 200
+  _currentHealth: 200
   _audioSource: {fileID: 4210756123682747069}
   _audioClips:
   - {fileID: 8300000, guid: 33d35e0d96bbfcc4f844ee1fe3e69c59, type: 3}
   - {fileID: 8300000, guid: 76569a7ff32385a4dad6a81a6ced8f4b, type: 3}
+  _isStrongEnemy: 1
 --- !u!82 &4210756123682747069
 AudioSource:
   m_ObjectHideFlags: 0

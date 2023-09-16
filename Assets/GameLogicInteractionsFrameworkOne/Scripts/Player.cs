@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
             Reload();
         }
 
-        //Testing
         if (Input.GetMouseButton(1))
         {
             Camera.main.fieldOfView = 25;
