@@ -418,6 +418,7 @@ MonoBehaviour:
   _audioClips:
   - {fileID: 8300000, guid: 33d35e0d96bbfcc4f844ee1fe3e69c59, type: 3}
   - {fileID: 8300000, guid: 76569a7ff32385a4dad6a81a6ced8f4b, type: 3}
+  _canMove: 1
   _isStrongEnemy: 0
 --- !u!82 &8707338880674173711
 AudioSource:

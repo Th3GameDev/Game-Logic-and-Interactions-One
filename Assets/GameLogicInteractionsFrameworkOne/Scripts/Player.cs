@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioSource[] _audioSource;
     [SerializeField] private AudioClip[] _audioClips;
-
+    
     void Start()
     {
         _canFire = true;
@@ -75,9 +75,16 @@ public class Player : MonoBehaviour
                 ai.Damage(50);
             }
         }
-        else if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 10))
+        else if (Physics.Raycast(ray, 500f, 1 << 10))
         {
             _audioSource[1].Play();
+        }
+        else if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 11))
+        {
+            if (_hitPoint.collider.TryGetComponent<ExploBarrel>(out ExploBarrel exploBarrel))
+            {
+               exploBarrel.Explode();
+            }
         }
     }
 

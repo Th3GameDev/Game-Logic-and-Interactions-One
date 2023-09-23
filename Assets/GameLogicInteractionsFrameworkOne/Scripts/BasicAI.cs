@@ -30,6 +30,8 @@ public class BasicAI : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _audioClips;
 
+    [SerializeField] private bool _canMove = true;
+
     [SerializeField] private bool _isStrongEnemy = false;
 
     void Start()
@@ -72,8 +74,12 @@ public class BasicAI : MonoBehaviour
         switch (_currentState)
         {
             case AIState.Running:
-                _anim.SetFloat("Speed", 3.5f);
-                Movement();
+                if (_canMove)
+                {
+                    _anim.SetFloat("Speed", 3.5f);
+                    Movement();
+                }
+                
                 break;
 
             case AIState.Hiding:
