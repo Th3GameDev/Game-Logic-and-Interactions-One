@@ -106,7 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116dfc109adeb5a438b08d7518124fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 92e0b69cfe2f08d4db673344552dd9a5, type: 2}
-  startColor: {r: 0, g: 0, b: 1, a: 1}
-  endColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  fadeDuration: 1
+  _material: {fileID: 2100000, guid: 92e0b69cfe2f08d4db673344552dd9a5, type: 2}

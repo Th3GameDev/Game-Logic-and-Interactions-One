@@ -3,16 +3,13 @@ using UnityEngine;
 
 public class EmissionColorFader : MonoBehaviour
 {
-    public Material material;
-    public Color startColor = Color.blue;
-    public Color endColor = Color.yellow;
-    public float fadeDuration = 1.0f;
-
-    private bool isFading = false;
+    [SerializeField] private Material _material;
+    private Color _startColor = Color.blue;
+    private Color _endColor = Color.yellow;
+    private float _fadeDuration = 1.0f;
 
     private void Start()
     {
-        
         StartCoroutine(FadeEmission());
     }
 
@@ -20,27 +17,23 @@ public class EmissionColorFader : MonoBehaviour
     {
         while (true)
         {
-            isFading = true;
-
             float timeElapsed = 0f;
-            while (timeElapsed < fadeDuration)
+            while (timeElapsed < _fadeDuration)
             {
-                float lerpFactor = timeElapsed / fadeDuration;
-                Color lerpedColor = Color.Lerp(startColor, endColor, lerpFactor);
-                material.SetColor("_EmissionColor", lerpedColor);
+                float lerpFactor = timeElapsed / _fadeDuration;
+                Color lerpedColor = Color.Lerp(_startColor, _endColor, lerpFactor);
+                _material.SetColor("_EmissionColor", lerpedColor);
 
                 timeElapsed += Time.deltaTime;
                 yield return null;
             }
 
             // Swap start and end colors for the next fade
-            Color temp = startColor;
-            startColor = endColor;
-            endColor = temp;
+            Color temp = _startColor;
+            _startColor = _endColor;
+            _endColor = temp;
 
-            isFading = false;
-
-            yield return new WaitForSeconds(fadeDuration);
+            yield return new WaitForSeconds(_fadeDuration);
         }
     }
 }

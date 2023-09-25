@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioSource[] _audioSource;
     [SerializeField] private AudioClip[] _audioClips;
+
+    [SerializeField] private ParticleSystem _muzzleFlash;
     
     void Start()
     {
@@ -54,6 +56,8 @@ public class Player : MonoBehaviour
 
     void Fire(float fireRate)
     {
+        _muzzleFlash.Play();
+
         _audioSource[0].Play();
 
         _currentAmmo--;
@@ -75,9 +79,13 @@ public class Player : MonoBehaviour
                 ai.Damage(50);
             }
         }
-        else if (Physics.Raycast(ray, 500f, 1 << 10))
+        else if (Physics.Raycast(ray,out _hitPoint, 500f, 1 << 10))
         {
             _audioSource[1].Play();
+            if (_hitPoint.collider.TryGetComponent<BarrierHealth>(out BarrierHealth barrier))
+            {              
+               barrier.TakeDamage(35);
+            }           
         }
         else if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 11))
         {
