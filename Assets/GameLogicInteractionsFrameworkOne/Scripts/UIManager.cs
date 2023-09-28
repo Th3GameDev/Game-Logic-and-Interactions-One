@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _warningText;
     [SerializeField] private TextMeshProUGUI _timeRemainingText, _timeText;
 
+    [SerializeField] private TextMeshProUGUI _startGameText;
     [SerializeField] private TextMeshProUGUI _winText, _gameOverText, _inputText;
 
     [SerializeField] private AudioSource _audioSource;
@@ -77,6 +78,11 @@ public class UIManager : MonoBehaviour
         _timeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
     }
 
+    public void DisableStartText()
+    {
+        _startGameText.enabled = false;
+    }
+
     public void EnableTimeRemaining()
     {
         _timeRemainingText.enabled = true;
@@ -90,7 +96,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ResetUI()
-    {
+    {      
         _scoreText.text = "0";
         _enemyCountText.text = "0";
         _ammoText.text = $"{_player.GetAmmoCount()}";

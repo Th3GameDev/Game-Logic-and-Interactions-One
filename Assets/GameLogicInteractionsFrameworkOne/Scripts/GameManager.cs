@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        //TestSpawn.Instance.gameObject.GetComponent<TestSpawn>().enabled = true;
+        UIManager.Instance.DisableStartText();
         SpawnManager.Instance.gameObject.GetComponent<SpawnManager>().enabled = true;
     }
 

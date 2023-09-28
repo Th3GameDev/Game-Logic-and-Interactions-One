@@ -130,8 +130,6 @@ public class Waypoints : MonoBehaviour
                 }
             }
 
-            Gizmos.color = Color.red;
-
             for (int i = 0; i < _waypoints.Length - 1; i++)
             {
                 Gizmos.DrawLine(transform.GetChild(i).position, transform.GetChild(i + 1).position);
@@ -150,8 +148,6 @@ public class Waypoints : MonoBehaviour
             {
                 Gizmos.DrawCube(t.position, boxSize);
             }
-
-            Gizmos.color = Color.green;
 
             int[] waypointIndices = new int[] { 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 17, 18, 19, 20, 21, 22 };
 
