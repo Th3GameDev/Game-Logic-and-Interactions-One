@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ExploBarrel : MonoBehaviour
 {
     [Range(0, 5f)][SerializeField] private float _exploRadius = 1.0f;
     [Range(0, 1000f)][SerializeField] private float _exploForce;
 
+    //Max Number of explo enemy array size at once 
     private int _maxHits = 5;
 
     [Range(0, 5f)][SerializeField] private float _offset = 1.0f;
@@ -19,14 +18,8 @@ public class ExploBarrel : MonoBehaviour
 
     void Awake()
     {
+        //Set array size
         _collidersHits = new Collider[_maxHits];
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void Explode()
@@ -37,13 +30,13 @@ public class ExploBarrel : MonoBehaviour
 
         ExplosionDamage(transform.position, _exploRadius);
 
+        //Spawn Broken Barrel and grab the childrens rigidbodys and apply force
         GameObject barrel = Instantiate(_brokeBarrelPrefab, transform.position, Quaternion.identity);
 
         Rigidbody[] rigidbodies = barrel.GetComponentsInChildren<Rigidbody>();
 
         foreach (Rigidbody rb in rigidbodies)
-        {
-            //Vector3 pos = new Vector3(, 1f, 1f);
+        {         
             rb.AddExplosionForce(_exploForce, this.transform.position, _exploRadius, 5f, ForceMode.Impulse);
             Destroy(barrel, 5f);
         }

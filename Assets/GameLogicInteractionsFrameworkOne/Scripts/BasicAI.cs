@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -44,7 +43,7 @@ public class BasicAI : MonoBehaviour
         {
             _agent.speed = 4;
             _maxHealth = 200;
-        }     
+        }
         else
         {
             _currentHealth = _maxHealth;
@@ -71,6 +70,7 @@ public class BasicAI : MonoBehaviour
             _currentState = AIState.Death;
         }
 
+        //AI State 
         switch (_currentState)
         {
             case AIState.Running:
@@ -79,7 +79,7 @@ public class BasicAI : MonoBehaviour
                     _anim.SetFloat("Speed", 3.5f);
                     Movement();
                 }
-                
+
                 break;
 
             case AIState.Hiding:
@@ -104,7 +104,7 @@ public class BasicAI : MonoBehaviour
 
     void Movement()
     {
-        // Start moving to the first waypoint if not started yet and waypoints are available.
+        // Start moving to the first waypoint if not started yet and waypoints are available
         if (!_hasStarted && _waypoints != null && _waypoints.GetWaypointCount() > 0)
         {
             _agent.SetDestination(_waypoints.GetWaypointPosition(_currentWaypointIndex));
@@ -114,6 +114,7 @@ public class BasicAI : MonoBehaviour
         // Check if the agent has reached the current waypoint.
         if (_agent.remainingDistance < 0.5f && !_agent.pathPending)
         {
+            //Check if the AI has reached a hiding waypoint
             switch (_currentWaypointIndex)
             {
                 case 1:
@@ -190,10 +191,10 @@ public class BasicAI : MonoBehaviour
 
     void MoveForward()
     {
-        // Move to the next waypoint by incrementing the currentWaypointIndex.
+        // Move to the next waypoint by incrementing the currentWaypointIndex
         _currentWaypointIndex++;
 
-        // Set the destination to the next waypoint's position.
+        // Set the destination to the next waypoint's position
         _agent.SetDestination(_waypoints.GetWaypointPosition(_currentWaypointIndex));
 
     }
@@ -218,15 +219,12 @@ public class BasicAI : MonoBehaviour
 
     IEnumerator TriggerAICompleted()
     {
-
         _agent.isStopped = true;
         _audioSource.PlayOneShot(_audioClips[1]);
         yield return new WaitForSeconds(_audioClips[1].length);
         this.gameObject.SetActive(false);
         ResetAI();
-       //TestSpawn.Instance.OnEnemySurvived();
         SpawnManager.Instance.OnEnemySurvived();
-        //SpawnManager.Instance.OnEnemyKilled(); //OLD OLD 
         _didComplete = false;
     }
 
@@ -234,7 +232,6 @@ public class BasicAI : MonoBehaviour
     {
         _audioSource.Play();
         GameManager.Instance.UpdateScore(50);
-        //TestSpawn.Instance.OnEnemyKilled();
         SpawnManager.Instance.OnEnemyKilled();
         _anim.SetTrigger("Death");
         _currentHealth = 0;
@@ -248,7 +245,7 @@ public class BasicAI : MonoBehaviour
     {
         _anim.SetBool("Hiding", true);
 
-        //Rotate AI to -180 On The Y Axis
+        //Rotate AI to -180 On The Y Axis when hiding
         _lookRotation = Quaternion.Euler(0, -180, 0);
         while (Quaternion.Angle(transform.rotation, _lookRotation) > 0.5f)
         {

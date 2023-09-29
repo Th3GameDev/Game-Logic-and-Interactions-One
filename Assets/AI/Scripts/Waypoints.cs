@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
@@ -77,6 +74,7 @@ public class Waypoints : MonoBehaviour
         return _waypoints[_randomNum].position;
     }
 
+    // Returns the position of the hiding waypoint at the given index
     public Vector3 GetHidingWaypointPosition(int index)
     {
         if (index >= 0 && index < _hidingWaypoints.Length)
@@ -89,6 +87,8 @@ public class Waypoints : MonoBehaviour
         return Vector3.zero;
     }
 
+
+    //Returns a random Hiding Waypoint Possition
     public Vector3 GetRandomHidingWaypoint()
     {
         _randomNum = Random.Range(0, _hidingWaypoints.Length);
@@ -109,14 +109,13 @@ public class Waypoints : MonoBehaviour
         return _hidingWaypoints[_randomNum].position;
     }
 
+    // Returns the total number of hiding waypoints
     public int GetHidingWaypointCount()
     {
         return _waypoints.Length;
     }
 
-
-
-    //Draws the blue spheres and red lines.Used to visualize the waypoints
+    //Draws the blue spheres and lines. Used to visualize the waypoints
     private void OnDrawGizmos()
     {
         if (_drawPath)

@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class UIManager : MonoBehaviour
 {
@@ -43,11 +41,6 @@ public class UIManager : MonoBehaviour
         ResetUI();
     }
 
-    void Update()
-    {
-
-    }
-
     public void UpdateAmmoCount(int ammoCount)
     {
         _ammoText.text = $"{ammoCount}";
@@ -66,13 +59,11 @@ public class UIManager : MonoBehaviour
     public void UpdateWaveNumber()
     {
         _waveText.text = $"wave {SpawnManager.Instance.GetCurrentWave()}";
-        //_waveText.text = $"wave {TestSpawn.Instance.GetCurrentWave()}";
     }
 
     public void UpdateTimeRemaining()
     {
         float time = SpawnManager.Instance.GetTimeRemaining();
-        //float time = TestSpawn.Instance.GetTimeRemaining();
         float minutes = Mathf.FloorToInt(time / 60);
         float seconds = Mathf.FloorToInt(time % 60);
         _timeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
@@ -94,6 +85,7 @@ public class UIManager : MonoBehaviour
         _timeRemainingText.enabled = false;
         _timeText.enabled = false;
     }
+
 
     public void ResetUI()
     {      
@@ -146,6 +138,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //Used to Trigger Warning sound
     public void PlayWarningSound()
     {
         if (!_isWarning)
@@ -156,6 +149,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //Used to Trigger timer tick sound
     public void PlayTimerTickSound(int NumOfTimerTicks)
     {
         if (!_isTimerTicking)
@@ -167,6 +161,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //Play warning sound at start of each wave
     private IEnumerator PlayWarning()
     {
         _audioSource.clip = _audioClips[1];
@@ -180,6 +175,7 @@ public class UIManager : MonoBehaviour
         _isWarning = false;
     }
 
+    //Plays timer tick for Timer Wave Countdown
     private IEnumerator PlayTimerSound(int NumOfTicks)
     {
         for (int i = 0; i < NumOfTicks; i++)

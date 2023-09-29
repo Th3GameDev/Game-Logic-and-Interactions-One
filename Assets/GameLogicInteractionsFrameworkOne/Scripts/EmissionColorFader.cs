@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EmissionColorFader : MonoBehaviour
 {
+    //This Script is used to fade the color of the barriers from blue to yellow and back to blue.
     [SerializeField] private Material _material;
     private Color _startColor = Color.blue;
     private Color _endColor = Color.yellow;

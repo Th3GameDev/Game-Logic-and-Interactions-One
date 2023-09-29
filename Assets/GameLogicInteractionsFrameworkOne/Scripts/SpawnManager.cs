@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -55,6 +53,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
+        //check for enemies alive to progress wave
         if (_enemiesSurvived >= 1 && !_isGameComplete)
         {
             _isGameComplete = true;
@@ -63,8 +62,10 @@ public class SpawnManager : MonoBehaviour
             GameManager.Instance.GameOver(false);
         }
 
+
         if (_enemiesAlive == 0 && _isSpawningComplete)
         {
+            //If current wave is ten. Its GameOver
             if (_currentWave == 10 && _isGameComplete)
             {
                 _isSpawningComplete = false;
@@ -78,6 +79,7 @@ public class SpawnManager : MonoBehaviour
             }
         }
 
+        //Wave timer Count down before spawning
         if (_isTimerCountdown)
         {
             if (_timeRemaining > 0f)
@@ -141,6 +143,7 @@ public class SpawnManager : MonoBehaviour
 
         GameObject newEnemy = null;
 
+        //If wave is Five or Greater random chance to spawn strong enemy
         if (_currentWave >= 5 && Random.Range(0, 2) == 0)
         {
             newEnemy = Instantiate(_strongEnemyPrefab, enemySpawnPos.position, Quaternion.identity);
