@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip[] _audioClips;
 
     [SerializeField] private ParticleSystem _muzzleFlash;
-    
+
     void Start()
     {
         _canFire = true;
@@ -69,26 +70,36 @@ public class Player : MonoBehaviour
 
         RaycastHit _hitPoint;
 
-        if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 8))
+        if (Physics.Raycast(ray, out _hitPoint, 500f))
         {
-            if (_hitPoint.collider.TryGetComponent<BasicAI>(out BasicAI ai))
+
+            switch (_hitPoint.collider.gameObject.layer)
             {
-                ai.Damage(50);
-            }
-        }
-        else if (Physics.Raycast(ray,out _hitPoint, 500f, 1 << 10))
-        {
-            _audioSource[1].Play();
-            if (_hitPoint.collider.TryGetComponent<BarrierHealth>(out BarrierHealth barrier))
-            {              
-               barrier.TakeDamage(35);
-            }           
-        }
-        else if (Physics.Raycast(ray, out _hitPoint, 500f, 1 << 11))
-        {
-            if (_hitPoint.collider.TryGetComponent<ExploBarrel>(out ExploBarrel exploBarrel))
-            {
-               exploBarrel.Explode();
+                case 8:
+                    if (_hitPoint.collider.TryGetComponent<BasicAI>(out BasicAI ai))
+                    {
+                        ai.Damage(50);
+                    }
+                    break;
+
+                case 10:
+                    _audioSource[1].Play();
+                    if (_hitPoint.collider.TryGetComponent<BarrierHealth>(out BarrierHealth barrier))
+                    {
+                        barrier.TakeDamage(35);
+                    }
+                    break;
+
+                case 11:
+                    if (_hitPoint.collider.TryGetComponent<ExploBarrel>(out ExploBarrel exploBarrel))
+                    {
+                        exploBarrel.Explode();
+                    }
+                    break;
+
+                default:
+                    break;
+
             }
         }
     }

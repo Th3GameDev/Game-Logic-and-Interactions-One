@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 264972961797156395}
   - component: {fileID: 264972961800580619}
   - component: {fileID: 264972961799580875}
+  - component: {fileID: 5316654508244521624}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (8)
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5316654508244521624
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264972961797583371}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &276616641308316282
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 276616641308216922}
   - component: {fileID: 276616641307414138}
   - component: {fileID: 276616641306315962}
+  - component: {fileID: 6138490281146594104}
   m_Layer: 0
   m_Name: Scifi_Column_04 (11)
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6138490281146594104
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276616641308316282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &303807789753881909
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 303807789753518357}
   - component: {fileID: 303807789756909877}
   - component: {fileID: 303807789755812853}
+  - component: {fileID: 4224233314056699128}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (19)
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4224233314056699128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303807789753881909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &397518147256295086
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +293,7 @@ GameObject:
   - component: {fileID: 397518147256320654}
   - component: {fileID: 397518147252929198}
   - component: {fileID: 397518147254026350}
+  - component: {fileID: 3671862882176363466}
   m_Layer: 0
   m_Name: Scifi_Column_04 (14)
   m_TagString: Untagged
@@ -316,6 +362,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3671862882176363466
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397518147256295086}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &654366089401985246
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +387,7 @@ GameObject:
   - component: {fileID: 654366089401758974}
   - component: {fileID: 654366089403053278}
   - component: {fileID: 654366089404184094}
+  - component: {fileID: 7538124093057184241}
   m_Layer: 0
   m_Name: Scifi_Column_04 (45)
   m_TagString: Untagged
@@ -395,6 +456,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7538124093057184241
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654366089401985246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &657599914453450982
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +481,7 @@ GameObject:
   - component: {fileID: 657599914453556422}
   - component: {fileID: 657599914454326502}
   - component: {fileID: 657599914455457318}
+  - component: {fileID: 8335166135298238494}
   m_Layer: 0
   m_Name: Scifi_Column_04 (24)
   m_TagString: Untagged
@@ -474,6 +550,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8335166135298238494
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657599914453450982}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1044989871009498517
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +575,7 @@ GameObject:
   - component: {fileID: 1044989871009077685}
   - component: {fileID: 1044989871008307605}
   - component: {fileID: 1044989871007308629}
+  - component: {fileID: 4989343995900483837}
   m_Layer: 0
   m_Name: Scifi_Column_04 (15)
   m_TagString: Untagged
@@ -553,6 +644,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4989343995900483837
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044989871009498517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1103602547913480204
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +669,7 @@ GameObject:
   - component: {fileID: 1103602547913835564}
   - component: {fileID: 1103602547914605580}
   - component: {fileID: 1103602547915736780}
+  - component: {fileID: 3977381513718122747}
   m_Layer: 0
   m_Name: Scifi_Column_04 (28)
   m_TagString: Untagged
@@ -632,6 +738,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3977381513718122747
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103602547913480204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1110833670109446132
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +763,7 @@ GameObject:
   - component: {fileID: 1110833670109602772}
   - component: {fileID: 1110833670108308468}
   - component: {fileID: 1110833670107177268}
+  - component: {fileID: 4034566991347333924}
   m_Layer: 0
   m_Name: Scifi_Column_04 (4)
   m_TagString: Untagged
@@ -711,6 +832,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4034566991347333924
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110833670109446132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1487592783855451495
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +857,7 @@ GameObject:
   - component: {fileID: 1487592783855542599}
   - component: {fileID: 1487592783854215527}
   - component: {fileID: 1487592783853249447}
+  - component: {fileID: 798463192155509971}
   m_Layer: 0
   m_Name: Scifi_Column_04 (35)
   m_TagString: Untagged
@@ -790,6 +926,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &798463192155509971
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487592783855451495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1495149375181049585
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +951,7 @@ GameObject:
   - component: {fileID: 1495149375181542097}
   - component: {fileID: 1495149375182312177}
   - component: {fileID: 1495149375183310897}
+  - component: {fileID: 8068939972252687516}
   m_Layer: 0
   m_Name: Scifi_Column_04 (41)
   m_TagString: Untagged
@@ -869,6 +1020,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8068939972252687516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495149375181049585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1578309645335289438
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +1045,7 @@ GameObject:
   - component: {fileID: 1578309645335773822}
   - component: {fileID: 1578309645338640990}
   - component: {fileID: 1578309645337542814}
+  - component: {fileID: 1756161676013784314}
   m_Layer: 0
   m_Name: Scifi_Column_04 (46)
   m_TagString: Untagged
@@ -948,6 +1114,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1756161676013784314
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578309645335289438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1686316015757786941
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +1139,7 @@ GameObject:
   - component: {fileID: 1686316015757878045}
   - component: {fileID: 1686316015760745277}
   - component: {fileID: 1686316015759778301}
+  - component: {fileID: 5640615055773692021}
   m_Layer: 0
   m_Name: Scifi_Column_04 (6)
   m_TagString: Untagged
@@ -1027,6 +1208,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5640615055773692021
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686316015757786941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &1941724223706495805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1233,7 @@ GameObject:
   - component: {fileID: 1941724223706523421}
   - component: {fileID: 1941724223709390653}
   - component: {fileID: 1941724223708423677}
+  - component: {fileID: 7834478722083749820}
   m_Layer: 0
   m_Name: Scifi_Column_04 (47)
   m_TagString: Untagged
@@ -1106,6 +1302,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7834478722083749820
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941724223706495805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &2120025047592889903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1327,7 @@ GameObject:
   - component: {fileID: 2120025047592858127}
   - component: {fileID: 2120025047589958191}
   - component: {fileID: 2120025047590957295}
+  - component: {fileID: 9039193481529528320}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (9)
   m_TagString: Untagged
@@ -1185,6 +1396,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &9039193481529528320
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120025047592889903}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &2208486511652419297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1421,7 @@ GameObject:
   - component: {fileID: 2208486511652842177}
   - component: {fileID: 2208486511655742177}
   - component: {fileID: 2208486511654610977}
+  - component: {fileID: 6163606849318222646}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (18)
   m_TagString: Untagged
@@ -1264,6 +1490,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6163606849318222646
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2208486511652419297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &2320489248404795540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1515,7 @@ GameObject:
   - component: {fileID: 2320489248404303028}
   - component: {fileID: 2320489248407694484}
   - component: {fileID: 2320489248406728276}
+  - component: {fileID: 1764678959493518031}
   m_Layer: 0
   m_Name: Scifi_Column_04 (18)
   m_TagString: Untagged
@@ -1343,6 +1584,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1764678959493518031
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320489248404795540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &2423705452857496487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1609,7 @@ GameObject:
   - component: {fileID: 2423705452857003911}
   - component: {fileID: 2423705452854136743}
   - component: {fileID: 2423705452855233895}
+  - component: {fileID: 2589028074738208490}
   m_Layer: 0
   m_Name: Scifi_Column_04 (26)
   m_TagString: Untagged
@@ -1422,6 +1678,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2589028074738208490
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423705452857496487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &2539542006039159480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1703,7 @@ GameObject:
   - component: {fileID: 2539542006038937240}
   - component: {fileID: 2539542006038167224}
   - component: {fileID: 2539542006037167224}
+  - component: {fileID: 7437105573018863217}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (10)
   m_TagString: Untagged
@@ -1501,6 +1772,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7437105573018863217
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539542006039159480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &2620551564976494904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1797,7 @@ GameObject:
   - component: {fileID: 2620551564976391448}
   - component: {fileID: 2620551564979815736}
   - component: {fileID: 2620551564978685944}
+  - component: {fileID: 471422042015659185}
   m_Layer: 0
   m_Name: Scifi_Column_04 (42)
   m_TagString: Untagged
@@ -1580,6 +1866,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &471422042015659185
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2620551564976494904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &2851284304747212243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1891,7 @@ GameObject:
   - component: {fileID: 2851284304747377139}
   - component: {fileID: 2851284304748179923}
   - component: {fileID: 2851284304749146899}
+  - component: {fileID: 7124781063439820274}
   m_Layer: 0
   m_Name: Scifi_Column_04 (19)
   m_TagString: Untagged
@@ -1659,6 +1960,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7124781063439820274
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851284304747212243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &2876687219956129176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1985,7 @@ GameObject:
   - component: {fileID: 2876687219956089272}
   - component: {fileID: 2876687219955319192}
   - component: {fileID: 2876687219954189144}
+  - component: {fileID: 2871323583233249644}
   m_Layer: 0
   m_Name: Scifi_Column_04 (38)
   m_TagString: Untagged
@@ -1738,6 +2054,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2871323583233249644
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876687219956129176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &2964039080913218668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +2079,7 @@ GameObject:
   - component: {fileID: 2964039080913055820}
   - component: {fileID: 2964039080910188652}
   - component: {fileID: 2964039080911286956}
+  - component: {fileID: 4083938442481705976}
   m_Layer: 0
   m_Name: Scifi_Column_04 (22)
   m_TagString: Untagged
@@ -1817,6 +2148,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4083938442481705976
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964039080913218668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &3415450958132893284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,6 +2173,7 @@ GameObject:
   - component: {fileID: 3415450958132464196}
   - component: {fileID: 3415450958135855716}
   - component: {fileID: 3415450958134888612}
+  - component: {fileID: 5167384719715192365}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (5)
   m_TagString: Untagged
@@ -1896,6 +2242,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5167384719715192365
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415450958132893284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &3964291749040038863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +2267,7 @@ GameObject:
   - component: {fileID: 3964291749040144367}
   - component: {fileID: 3964291749043044303}
   - component: {fileID: 3964291749042044175}
+  - component: {fileID: 867829633506688997}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (11)
   m_TagString: Untagged
@@ -1975,6 +2336,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &867829633506688997
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964291749040038863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &3981471337819521106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2361,7 @@ GameObject:
   - component: {fileID: 3981471337819823218}
   - component: {fileID: 3981471337818496082}
   - component: {fileID: 3981471337817530002}
+  - component: {fileID: 6567374142249783329}
   m_Layer: 0
   m_Name: Scifi_Column_04 (39)
   m_TagString: Untagged
@@ -2054,6 +2430,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6567374142249783329
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3981471337819521106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4035639499516699180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,6 +2455,7 @@ GameObject:
   - component: {fileID: 4035639499516935692}
   - component: {fileID: 4035639499513511468}
   - component: {fileID: 4035639499514510572}
+  - component: {fileID: 4155458379974664413}
   m_Layer: 0
   m_Name: Scifi_Column_04 (32)
   m_TagString: Untagged
@@ -2133,6 +2524,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4155458379974664413
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035639499516699180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4082666566377865385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,6 +2549,7 @@ GameObject:
   - component: {fileID: 4082666566378232969}
   - component: {fileID: 4082666566379035817}
   - component: {fileID: 4082666566380133993}
+  - component: {fileID: 6415613641931535729}
   m_Layer: 0
   m_Name: Scifi_Column_04 (44)
   m_TagString: Untagged
@@ -2212,6 +2618,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6415613641931535729
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082666566377865385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4121845642198829858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2643,7 @@ GameObject:
   - component: {fileID: 4121845642199258882}
   - component: {fileID: 4121845642202126114}
   - component: {fileID: 4121845642201028066}
+  - component: {fileID: 4450246540782376367}
   m_Layer: 0
   m_Name: Scifi_Column_04 (12)
   m_TagString: Untagged
@@ -2291,6 +2712,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4450246540782376367
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121845642198829858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4290489719786779492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2737,7 @@ GameObject:
   - component: {fileID: 4290489719786876740}
   - component: {fileID: 4290489719787679588}
   - component: {fileID: 4290489719788776868}
+  - component: {fileID: 8260143137128869676}
   m_Layer: 0
   m_Name: Scifi_Column_04 (31)
   m_TagString: Untagged
@@ -2370,6 +2806,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8260143137128869676
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290489719786779492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4321358116710102747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,6 +2831,7 @@ GameObject:
   - component: {fileID: 4321358116710394619}
   - component: {fileID: 4321358116713294555}
   - component: {fileID: 4321358116712294427}
+  - component: {fileID: 4722353775711319073}
   m_Layer: 0
   m_Name: Scifi_Column_04 (8)
   m_TagString: Untagged
@@ -2449,6 +2900,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4722353775711319073
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4321358116710102747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4362575971865896244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2925,7 @@ GameObject:
   - component: {fileID: 4362575971866327316}
   - component: {fileID: 4362575971862935860}
   - component: {fileID: 4362575971863903220}
+  - component: {fileID: 7896615567124734922}
   m_Layer: 0
   m_Name: Scifi_Column_04 (40)
   m_TagString: Untagged
@@ -2528,6 +2994,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7896615567124734922
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362575971865896244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4652671643009828401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,6 +3019,7 @@ GameObject:
   - component: {fileID: 4652671643010062865}
   - component: {fileID: 4652671643008735793}
   - component: {fileID: 4652671643007637745}
+  - component: {fileID: 1594463402856341221}
   m_Layer: 0
   m_Name: Scifi_Column_04 (29)
   m_TagString: Untagged
@@ -2607,6 +3088,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1594463402856341221
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652671643009828401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4793255857572211368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +3113,7 @@ GameObject:
   - component: {fileID: 4793255857571853960}
   - component: {fileID: 4793255857571051176}
   - component: {fileID: 4793255857569952872}
+  - component: {fileID: 207659343908829099}
   m_Layer: 0
   m_Name: Scifi_Column_04 (25)
   m_TagString: Untagged
@@ -2686,6 +3182,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &207659343908829099
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793255857572211368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &4925115885894698435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +3207,7 @@ GameObject:
   - component: {fileID: 4925115885894801891}
   - component: {fileID: 4925115885893507523}
   - component: {fileID: 4925115885892508419}
+  - component: {fileID: 1728779096669520567}
   m_Layer: 0
   m_Name: Scifi_Column_04 (20)
   m_TagString: Untagged
@@ -2765,6 +3276,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1728779096669520567
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925115885894698435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &5016668794376265121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +3301,7 @@ GameObject:
   - component: {fileID: 5016668794376028545}
   - component: {fileID: 5016668794377355681}
   - component: {fileID: 5016668794378453857}
+  - component: {fileID: 1484091868017248899}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (14)
   m_TagString: Untagged
@@ -2844,6 +3370,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1484091868017248899
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016668794376265121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &5151523173150133847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,6 +3395,7 @@ GameObject:
   - component: {fileID: 5151523173149774455}
   - component: {fileID: 5151523173153198679}
   - component: {fileID: 5151523173152067735}
+  - component: {fileID: 3093004758522382101}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (17)
   m_TagString: Untagged
@@ -2923,6 +3464,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3093004758522382101
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151523173150133847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &5155390957827276112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,6 +3489,7 @@ GameObject:
   - component: {fileID: 5155390957826974064}
   - component: {fileID: 5155390957830398288}
   - component: {fileID: 5155390957829268368}
+  - component: {fileID: 3764237607294241200}
   m_Layer: 0
   m_Name: Scifi_Column_04 (37)
   m_TagString: Untagged
@@ -3002,6 +3558,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3764237607294241200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155390957827276112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &5224976645990408786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,6 +3583,7 @@ GameObject:
   - component: {fileID: 5224976645990907506}
   - component: {fileID: 5224976645987483218}
   - component: {fileID: 5224976645988482194}
+  - component: {fileID: 7019975918191605855}
   m_Layer: 0
   m_Name: Scifi_Column_04
   m_TagString: Untagged
@@ -3081,6 +3652,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7019975918191605855
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5224976645990408786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &5644135388959018736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,6 +3677,7 @@ GameObject:
   - component: {fileID: 5644135388958855888}
   - component: {fileID: 5644135388960183024}
   - component: {fileID: 5644135388961280048}
+  - component: {fileID: 7138644890377319975}
   m_Layer: 0
   m_Name: Scifi_Column_04 (16)
   m_TagString: Untagged
@@ -3160,6 +3746,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7138644890377319975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644135388959018736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &5650859501025967934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3771,7 @@ GameObject:
   - component: {fileID: 5650859501026059038}
   - component: {fileID: 5650859501028959038}
   - component: {fileID: 5650859501027959294}
+  - component: {fileID: 3195513089688738482}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (15)
   m_TagString: Untagged
@@ -3239,6 +3840,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3195513089688738482
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650859501025967934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &5699754062193587336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3865,7 @@ GameObject:
   - component: {fileID: 5699754062193682600}
   - component: {fileID: 5699754062192355464}
   - component: {fileID: 5699754062191389256}
+  - component: {fileID: 3073686195397220426}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (16)
   m_TagString: Untagged
@@ -3318,6 +3934,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3073686195397220426
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5699754062193587336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &5743926652320601738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,6 +3959,7 @@ GameObject:
   - component: {fileID: 5743926652320107178}
   - component: {fileID: 5743926652317207178}
   - component: {fileID: 5743926652318337098}
+  - component: {fileID: 3525829613210209664}
   m_Layer: 0
   m_Name: Scifi_Column_04 (21)
   m_TagString: Untagged
@@ -3397,6 +4028,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3525829613210209664
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743926652320601738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &5744861575608656306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,6 +4053,7 @@ GameObject:
   - component: {fileID: 5744861575608958354}
   - component: {fileID: 5744861575605534130}
   - component: {fileID: 5744861575606665074}
+  - component: {fileID: 996069010114703251}
   m_Layer: 0
   m_Name: Scifi_Column_04 (34)
   m_TagString: Untagged
@@ -3476,6 +4122,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &996069010114703251
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5744861575608656306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &5753753850661863359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,6 +4147,7 @@ GameObject:
   - component: {fileID: 866577473539899703}
   - component: {fileID: 8424990072812620656}
   - component: {fileID: 6274533990917801607}
+  - component: {fileID: 8037772014466655512}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (20)
   m_TagString: Untagged
@@ -3555,6 +4216,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8037772014466655512
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753753850661863359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &6051947016089801357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,6 +4241,7 @@ GameObject:
   - component: {fileID: 6051947016089702061}
   - component: {fileID: 6051947016093126285}
   - component: {fileID: 6051947016091995213}
+  - component: {fileID: 8545935040655282042}
   m_Layer: 0
   m_Name: Scifi_Column_04 (23)
   m_TagString: Untagged
@@ -3634,6 +4310,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8545935040655282042
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051947016089801357}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &6427428817266594038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3645,6 +4335,7 @@ GameObject:
   - component: {fileID: 6427428817267018966}
   - component: {fileID: 6427428817269886198}
   - component: {fileID: 6427428817268788790}
+  - component: {fileID: 6514038763871183794}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (4)
   m_TagString: Untagged
@@ -3713,6 +4404,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6514038763871183794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427428817266594038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &6427428817576186599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,6 +4429,7 @@ GameObject:
   - component: {fileID: 6427428817576087239}
   - component: {fileID: 6427428817573187303}
   - component: {fileID: 6427428817574186023}
+  - component: {fileID: 8895513030756499416}
   m_Layer: 0
   m_Name: Scifi_Wall_04
   m_TagString: Untagged
@@ -3792,6 +4498,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8895513030756499416
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427428817576186599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &6427428817897767589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,6 +4523,7 @@ GameObject:
   - component: {fileID: 6427428817897283205}
   - component: {fileID: 6427428817896480421}
   - component: {fileID: 6427428817895513189}
+  - component: {fileID: 4720986852813508816}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (2)
   m_TagString: Untagged
@@ -3871,6 +4592,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4720986852813508816
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427428817897767589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &6427428817964708243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,6 +4716,7 @@ GameObject:
   - component: {fileID: 6427428818451125441}
   - component: {fileID: 6427428818450322657}
   - component: {fileID: 6427428818449225249}
+  - component: {fileID: 5305440187508456545}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (3)
   m_TagString: Untagged
@@ -4049,6 +4785,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5305440187508456545
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427428818451220705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &6427428818559844285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,6 +4810,7 @@ GameObject:
   - component: {fileID: 6427428818559542173}
   - component: {fileID: 6427428818560869309}
   - component: {fileID: 6427428818561835389}
+  - component: {fileID: 8134844494324067821}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (1)
   m_TagString: Untagged
@@ -4128,6 +4879,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8134844494324067821
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427428818559844285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &6441489071397019201
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,6 +4904,7 @@ GameObject:
   - component: {fileID: 6441489071396717153}
   - component: {fileID: 6441489071395947073}
   - component: {fileID: 6441489071394816129}
+  - component: {fileID: 1778205110356515889}
   m_Layer: 0
   m_Name: Scifi_Column_04 (27)
   m_TagString: Untagged
@@ -4207,6 +4973,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1778205110356515889
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441489071397019201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &6509713091769272280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4218,6 +4998,7 @@ GameObject:
   - component: {fileID: 6509713091768982520}
   - component: {fileID: 6509713091770309592}
   - component: {fileID: 6509713091771275544}
+  - component: {fileID: 8557017414989127227}
   m_Layer: 0
   m_Name: Scifi_Column_04 (9)
   m_TagString: Untagged
@@ -4286,6 +5067,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8557017414989127227
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509713091769272280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &6831977306745892229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,6 +5092,7 @@ GameObject:
   - component: {fileID: 6831977306745598373}
   - component: {fileID: 6831977306746892677}
   - component: {fileID: 6831977306747892549}
+  - component: {fileID: 4859535973359077494}
   m_Layer: 0
   m_Name: Scifi_Column_04 (43)
   m_TagString: Untagged
@@ -4365,6 +5161,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4859535973359077494
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831977306745892229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &6864414162986842590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,6 +5186,7 @@ GameObject:
   - component: {fileID: 6864414162986608126}
   - component: {fileID: 6864414162983740894}
   - component: {fileID: 6864414162984838942}
+  - component: {fileID: 874452062123731789}
   m_Layer: 0
   m_Name: Scifi_Column_04 (17)
   m_TagString: Untagged
@@ -4444,6 +5255,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &874452062123731789
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864414162986842590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &6939983743279476177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4455,6 +5280,7 @@ GameObject:
   - component: {fileID: 6939983743279903217}
   - component: {fileID: 6939983743278608849}
   - component: {fileID: 6939983743277478673}
+  - component: {fileID: 7283411356289206683}
   m_Layer: 0
   m_Name: Scifi_Column_04 (5)
   m_TagString: Untagged
@@ -4523,6 +5349,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7283411356289206683
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6939983743279476177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &7112205521344714280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,6 +5374,7 @@ GameObject:
   - component: {fileID: 7112205521344875016}
   - component: {fileID: 7112205521345645096}
   - component: {fileID: 7112205521346644200}
+  - component: {fileID: 612212756894527028}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (6)
   m_TagString: Untagged
@@ -4602,6 +5443,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &612212756894527028
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112205521344714280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &7236466428484419902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,6 +5468,7 @@ GameObject:
   - component: {fileID: 7236466428484590878}
   - component: {fileID: 7236466428485393726}
   - component: {fileID: 7236466428486361086}
+  - component: {fileID: 5440764558935704433}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (7)
   m_TagString: Untagged
@@ -4681,6 +5537,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5440764558935704433
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236466428484419902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &7645812388661757741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,6 +5562,7 @@ GameObject:
   - component: {fileID: 7645812388661336845}
   - component: {fileID: 7645812388658469677}
   - component: {fileID: 7645812388659567085}
+  - component: {fileID: 8139643403304958936}
   m_Layer: 0
   m_Name: Scifi_Column_04 (7)
   m_TagString: Untagged
@@ -4760,6 +5631,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8139643403304958936
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645812388661757741}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &8127185239773858664
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,6 +5656,7 @@ GameObject:
   - component: {fileID: 8127185239773763400}
   - component: {fileID: 8127185239777154920}
   - component: {fileID: 8127185239776056744}
+  - component: {fileID: 7927547209500143632}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (12)
   m_TagString: Untagged
@@ -4839,6 +5725,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7927547209500143632
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127185239773858664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &8249785970573811051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,6 +5750,7 @@ GameObject:
   - component: {fileID: 8249785970573574475}
   - component: {fileID: 8249785970576998763}
   - component: {fileID: 8249785970575999915}
+  - component: {fileID: 1841548254349752785}
   m_Layer: 0
   m_Name: Scifi_Column_04 (1)
   m_TagString: Untagged
@@ -4918,6 +5819,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1841548254349752785
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249785970573811051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &8284513255167570831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,6 +5844,7 @@ GameObject:
   - component: {fileID: 8284513255167143855}
   - component: {fileID: 8284513255170568079}
   - component: {fileID: 8284513255169568079}
+  - component: {fileID: 6177393733659790499}
   m_Layer: 0
   m_Name: Scifi_Column_04 (13)
   m_TagString: Untagged
@@ -4997,6 +5913,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6177393733659790499
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284513255167570831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &8313830527102624574
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,6 +5938,7 @@ GameObject:
   - component: {fileID: 8313830527103123230}
   - component: {fileID: 8313830527106023230}
   - component: {fileID: 8313830527104892414}
+  - component: {fileID: 7968622716443362194}
   m_Layer: 0
   m_Name: Scifi_Column_04 (36)
   m_TagString: Untagged
@@ -5076,6 +6007,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7968622716443362194
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8313830527102624574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &8710943447965280451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,6 +6032,7 @@ GameObject:
   - component: {fileID: 8710943447965185251}
   - component: {fileID: 8710943447962318019}
   - component: {fileID: 8710943447963284995}
+  - component: {fileID: 3778554358747237766}
   m_Layer: 0
   m_Name: Scifi_Column_04 (33)
   m_TagString: Untagged
@@ -5155,6 +6101,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3778554358747237766
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710943447965280451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &8730136660237066956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,6 +6126,7 @@ GameObject:
   - component: {fileID: 8730136660237106924}
   - component: {fileID: 8730136660240006860}
   - component: {fileID: 8730136660239006732}
+  - component: {fileID: 6855577940270654955}
   m_Layer: 0
   m_Name: Scifi_Column_04 (2)
   m_TagString: Untagged
@@ -5234,6 +6195,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6855577940270654955
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730136660237066956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &8739599980798170429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5245,6 +6220,7 @@ GameObject:
   - component: {fileID: 8739599980798134557}
   - component: {fileID: 8739599980795234621}
   - component: {fileID: 8739599980796234749}
+  - component: {fileID: 8439190367363086867}
   m_Layer: 0
   m_Name: Scifi_Column_04 (10)
   m_TagString: Untagged
@@ -5313,6 +6289,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8439190367363086867
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739599980798170429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &9010840692725156106
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,6 +6314,7 @@ GameObject:
   - component: {fileID: 9010840692725060906}
   - component: {fileID: 9010840692728485130}
   - component: {fileID: 9010840692727355338}
+  - component: {fileID: 8822880872306977997}
   m_Layer: 0
   m_Name: Scifi_Column_04 (30)
   m_TagString: Untagged
@@ -5392,6 +6383,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8822880872306977997
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010840692725156106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
 --- !u!1 &9110594003235413473
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,6 +6408,7 @@ GameObject:
   - component: {fileID: 9110594003235045825}
   - component: {fileID: 9110594003234275809}
   - component: {fileID: 9110594003233145633}
+  - component: {fileID: 4001591954233214381}
   m_Layer: 0
   m_Name: Scifi_Wall_04 (13)
   m_TagString: Untagged
@@ -5471,6 +6477,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4001591954233214381
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110594003235413473}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 25457142623534554971bf209f8976d3, type: 3}
 --- !u!1 &9176872128456423568
 GameObject:
   m_ObjectHideFlags: 0
@@ -5482,6 +6502,7 @@ GameObject:
   - component: {fileID: 9176872128456451248}
   - component: {fileID: 9176872128457221264}
   - component: {fileID: 9176872128458352208}
+  - component: {fileID: 1855800283349703966}
   m_Layer: 0
   m_Name: Scifi_Column_04 (3)
   m_TagString: Untagged
@@ -5550,3 +6571,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1855800283349703966
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176872128456423568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d6d4447ca9aba417baa61c0b7bbee7de, type: 3}
